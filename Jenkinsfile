@@ -6,6 +6,14 @@ pipeline {
     }
   }
   stages {
+    stage('Project Type Determine'){
+      steps{
+        sh '''
+           pwd
+           ls -la
+        '''
+      }
+    }
     stage('Build') {
       steps{
         sh 'npm install'
